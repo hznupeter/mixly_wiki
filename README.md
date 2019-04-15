@@ -20,5 +20,8 @@ http://www.sublimetext.com/
 ## 项目目录说明
 
 |--doc
+
 	|--build  *生成目录*
+
 	|--source *源文件目录*
+	
