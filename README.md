@@ -10,6 +10,10 @@ http://www.sublimetext.com/
 ### 克隆项目到本地
 * 打开github-desktop 软件，依次点击：File-Clone a Repository-URL，在URL中输入https://github.com/hznupeter/mixly_wiki.git
 * 设置项目本地存储地址
+
 ![](images/clone_repo.png)
+
+### 编写项目
+* 打开github-desktop 软件，依次点击Repository-open in sublime Text,用sublime打开该项目。
 
 
