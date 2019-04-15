@@ -18,13 +18,12 @@ http://www.sublimetext.com/
 ![](images/sublime.png)
 
 ## 项目目录说明
-
+```
 |--doc
-
 	|--build  *生成目录*
-
 	|--source *源文件目录*
 
+```
 以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
 ## Sphinx语法说明
 
