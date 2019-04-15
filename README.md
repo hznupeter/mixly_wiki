@@ -24,4 +24,7 @@ http://www.sublimetext.com/
 	|--build  *生成目录*
 
 	|--source *源文件目录*
-	
+
+## 语法说明
+
+![语法参考](https://www.cnblogs.com/zzqcn/p/5096876.html#_label7)
