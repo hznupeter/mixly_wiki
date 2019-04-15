@@ -13,7 +13,12 @@ http://www.sublimetext.com/
 
 ![](images/clone_repo.png)
 
-### 编写项目
-* 打开github-desktop 软件，依次点击Repository-open in sublime Text,用sublime打开该项目。
+## 编写项目
+* 打开github-desktop 软件，依次点击Repository-open in sublime Text,用sublime打开该项目进行编辑。
+![](images/sublime.png)
 
+## 项目目录说明
 
+|--doc
+	|--build  *生成目录*
+	|--source *源文件目录*
