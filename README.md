@@ -20,14 +20,24 @@ http://www.sublimetext.com/
 ## 项目目录说明
 ```
 |--doc
-	|--build  *生成目录*
+   |--build  *生成目录*
+		|--doctrees
+		|--gettext
+		|--html
 	|--source *源文件目录*
+		|--_static
+		|--_templates
+		|--arduino
+		|--basic
+		|--locale
+		|--MicroPython
+		|--Python
 
 ```
 以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
 ## Sphinx语法说明
 
-![语法参考](https://www.cnblogs.com/zzqcn/p/5096876.html#_label7)
+语法参考https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
 
 
 ## 提交代码
