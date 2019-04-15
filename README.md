@@ -25,6 +25,28 @@ http://www.sublimetext.com/
 
 	|--source *源文件目录*
 
-## 语法说明
+以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
+## Sphinx语法说明
 
 ![语法参考](https://www.cnblogs.com/zzqcn/p/5096876.html#_label7)
+
+
+## 提交代码
+
+修改文本后，按照下图操作提交代码。
+![](images/commit.png)
+
+## 本地预览
+* 安装python3.x
+* 打开cmd
+```
+pip install -U Sphinx
+```
+* 跳转到本地项目路径，执行生成命令
+```
+make html
+```
+* 打开build/html/index.html本地预览。
+
+## 在线预览
+在提交代码之后，浏览https://mixly-wiki-test.readthedocs.io/zh_CN/latest/
