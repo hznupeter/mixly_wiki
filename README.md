@@ -51,6 +51,12 @@ https://www.arduino.cc/reference/en/
 
 语法参考https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
 
+## wiki编写说明
+根据mixly模块顺序，介绍每一个模块。包括截图、描述、参数、返回值、范例、注释（注意点）。
+
+编写文件可以参考``` source\arduino\02.Input-Output.rst```
+
+显示效果可以参考 https://mixly.readthedocs.io/zh_CN/latest/arduino/02.Input-Output.html
 
 ## 提交代码
 
