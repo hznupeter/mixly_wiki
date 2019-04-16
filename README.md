@@ -53,8 +53,10 @@ pip install -U Sphinx
 ```
 * 跳转到本地项目路径，执行生成命令
 ```
+cd Documents\GitHub\mixly_wiki\doc
 make html
 ```
+![](images/cmd.png)
 * 打开build/html/index.html本地预览。
 
 ## 在线预览
