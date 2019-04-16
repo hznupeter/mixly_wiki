@@ -59,7 +59,7 @@ https://www.arduino.cc/reference/en/
 
 ## 本地预览
 * 安装python3.x
-* 打开cmd
+* 打开cmd，输入以下命令，配置基础环境
 ```
 pip install -U Sphinx
 pip install sphinx_rtd_theme
