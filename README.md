@@ -35,6 +35,12 @@ http://www.sublimetext.com/
 
 ```
 以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
+
+## arduino 语法参考
+http://www.cnblogs.com/xczr/p/7832015.html
+
+https://www.arduino.cc/reference/en/
+
 ## Sphinx语法说明
 
 语法参考https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
