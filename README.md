@@ -25,13 +25,19 @@ http://www.sublimetext.com/
       |--gettext
       |--html
    |--source /*源文件目录*/
-      |--_static
-      |--_templates
-      |--arduino
-      |--basic
-      |--locale
-      |--MicroPython
-      |--Python
+      |--_static /*静态html文件目录*/
+      |--_templates /*自定义模板目录*/
+      |--arduino /*arduino部分wiki目录*/
+         |--images /*arduino引用图片*/
+            |--02  /*02.XXX.rst 文件引用的图片目录*/
+               |-- analogRead.png /*所有图片都用png格式，文件命名格式为该函数名*/
+               |-- analogRead-example.png /*模块使用范例截图*/
+               |-- analogRead.en.png /*analogRead.png对应的英文图片*/
+               |-- analogRead-example.en.png /*analogRead-example.png对应的英文图片*/
+      |--basic /*软件基础部分wiki目录*/
+      |--locale /*多语言目录*/
+      |--MicroPython /*micropython部分wiki目录*/
+      |--Python /*python部分wiki目录*/
 
 ```
 以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
