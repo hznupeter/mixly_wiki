@@ -56,6 +56,7 @@ https://www.arduino.cc/reference/en/
 * 打开cmd
 ```
 pip install -U Sphinx
+pip install sphinx_rtd_theme
 ```
 * 跳转到本地项目路径，执行生成命令
 ```
