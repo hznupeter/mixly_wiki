@@ -8,7 +8,7 @@
 * 脉冲长度
 * 移位输出
 
-.. image:: images/02/inout1.png
+.. image:: images/02/inout.png
 
 数字输出
 --------------
