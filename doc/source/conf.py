@@ -80,3 +80,14 @@ html_sidebars = {
    '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
+
+# -- Options for LaTeX output ---------------------------------------------
+# 以下为LaTeX语法，可以配置编码格式、字体等，详解请自行百度
+latex_elements = {
+'preamble': '''
+\\hypersetup{unicode=true}
+\\usepackage{CJKutf8}
+\\AtBeginDocument{\\begin{CJK}{UTF8}{gbsn}}
+\\AtEndDocument{\\end{CJK}}
+'''
+}

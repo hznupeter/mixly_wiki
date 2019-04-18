@@ -1,12 +1,16 @@
-# mixly wiki 
+# Mixly Wiki 
 
-## Mixly wiki 编写准备
+## Mixly Wiki 编写准备
+
 ### 注册github账号
 https://github.com/join?source=header-home
+
 ### 安装github同步软件github-desktop 
 https://desktop.github.com/
-### 安装文本编辑器sublime
+
+### 安装好用的文本编辑器sublime
 http://www.sublimetext.com/
+
 ### 克隆项目到本地
 * 打开github-desktop 软件，依次点击：File-Clone a Repository-URL，在URL中输入https://github.com/hznupeter/mixly_wiki.git
 * 设置项目本地存储地址
@@ -42,21 +46,21 @@ http://www.sublimetext.com/
 ```
 以 arduino为例进行目录说明，arduino目录中包含多个rst文件，rst为wiki的核心文件，通过编辑该类文件创建wiki。
 
-## arduino 语法参考
+在编写mixly wiki过程中可以参考 arduino语法。
+
+编写wiki所使用rst文档采用的是Sphinx，常用语法可以参考下面链接。https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
+## Arduino 语法参考
 http://www.cnblogs.com/xczr/p/7832015.html
 
 https://www.arduino.cc/reference/en/
 
-## Sphinx语法说明
-
-语法参考https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
 
 ## wiki编写说明
 根据mixly模块顺序，介绍每一个模块。包括截图、描述、参数、返回值、范例、注释（注意点）。
 
-编写文件可以参考``` source\arduino\02.Input-Output.rst```
+编写文件可以参考```source\arduino\02.Input-Output.rst```
 
-显示效果可以参考 https://mixly.readthedocs.io/zh_CN/latest/arduino/02.Input-Output.html
+显示效果可以参考 https://mixly-wiki-test.readthedocs.io/zh_CN/latest/arduino/02.Input-Output.html
 
 ## 提交代码
 
