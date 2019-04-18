@@ -85,3 +85,53 @@ make html
 
 ## 在线预览
 在提交代码之后，浏览https://mixly-wiki-test.readthedocs.io/zh_CN/latest/
+
+
+## 支持pdf导出(高级应用)
+
+### 安装docker 
+https://www.docker.com/
+### 更改docker源
+
+在桌面右下角状态栏中右键 docker 图标，修改在 Docker Daemon 标签页中的 json ，把下面的地址:
+```http://f1361db2.m.daocloud.io```
+加到" registry-mirrors"的数组里。点击 Apply 。
+### 编译 Dockerfile
+打开cmd，运行
+```
+docker pull iccccing/shpinx-pdf-zh
+```
+### 更改配置文件
+
+为了满足中文编码的支持，需要在config.py中设置如下参数：
+```
+# -- Options for LaTeX output ---------------------------------------------
+# 以下为LaTeX语法，可以配置编码格式、字体等，详解请自行百度
+latex_elements = {
+'preamble': '''
+\\hypersetup{unicode=true}
+\\usepackage{CJKutf8}
+\\AtBeginDocument{\\begin{CJK}{UTF8}{gbsn}}
+\\AtEndDocument{\\end{CJK}}
+'''
+}
+
+```
+### 运行容器
+打开cmd，运行:
+c/Users/Peter/Documents/GitHub/mixly_wiki/doc 为doc路径
+```
+docker run -it -v c/Users/Peter/Documents/GitHub/mixly_wiki/doc:c/Users/Peter/Documents/GitHub/mixly_wiki/doc --name my-sphinx iccccing/sphinx-pdf-zh
+
+```
+
+### 进入容器
+docker exec -it my-sphinx bash
+
+### 开始编译
+```
+make latexpdf
+```
+### 查看文件
+
+进入编译结果目录_xxx/latex可以看到xxx.pdf文件
