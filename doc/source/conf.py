@@ -87,4 +87,4 @@ html_sidebars = {
 epub_basename='你们好'
 epub_language='zh_CN'
 
-epub_max_image_width=1
+epub_max_image_width=0
