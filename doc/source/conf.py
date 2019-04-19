@@ -16,14 +16,12 @@
 
 
 # -- Project information -----------------------------------------------------
-
 project = 'Mixly Wiki'
 copyright = '2019, Mixly Team'
 author = 'hznupeter'
 version='0.999'
 # The full version, including alpha/beta/rc tags
 release = '0.999'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -81,10 +79,3 @@ html_sidebars = {
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 
-
-
-
-epub_basename='你们好'
-epub_language='zh_CN'
-
-epub_max_image_width=0
