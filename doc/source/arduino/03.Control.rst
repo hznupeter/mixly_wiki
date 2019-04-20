@@ -37,8 +37,7 @@
 
 .. code-block:: c
     :linenos:
-    :emphasize-lines: 3,6 
-
+  
     void attachInterrupt_fun_2() {
     digitalWrite(13,HIGH);
     }
@@ -298,7 +297,6 @@ MsTimer2 定时器
 
 .. code-block:: c
 	:linenos:
-	:emphasize-lines: 3,6 
 
 	#include <MsTimer2.h>
 	volatile boolean state;
