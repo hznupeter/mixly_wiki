@@ -1,58 +1,88 @@
-输入/输出 (普通视图)
+Bylnk IOT
 =====================
 
-输入/\输出所包含的指令主要分为四部分：控制管脚的输入输出（按信号类型可分为数字信号和模拟信号）、中断、脉冲长度及ShiftOut。
+Blynk IOT类别中包含了用所有跟Blynk物联网平台相关的命令。如网络连接，发送数据，接受数据，控制组件等。
 
-* 输入输出：数字输入、数字输出、模拟输入、模拟输出
-* 中断控制：定义中断，取消中断
-* 脉冲长度
-* 移位输出
+.. image:: images/16/blynk.png
 
-.. image:: images/02/inout.png
+准备工作
+------------------
+Blynk App 下载
 
-数字输出
+安卓用户扫描下方二维码下载Blynk App
+
+.. image:: images/16/app_QR.png
+
+.. Attention::
+	请不要使用微信扫描该二维码，微信会屏蔽该二维码。可以使用手机浏览器自带的二维码扫描功能。
+
+苹果用户直接在app store 中搜索blynk
+
+.. image:: images/16/apple_app.png
+
+Blynk账号注册
+-----------------
+安装好APP之后，进入app首页，点击Create New Account,输入邮箱和密码。
+
+如果要注册国内服务器或者本地服务器的账号，在下方设置中将服务器地址改成本地服务器地址。
+
+
+.. image:: images/16/sign_up.png
+
+Blynk账号登录
+-----------------
+注册好账号之后，就可以登录Blynk App了。
+
+.. image:: images/16/sign_in.png
+
+
+
+服务器信息
 --------------
+
+.. image:: images/16/server_info.png
 
 .. code-block:: c
 	:linenos:
 
-	digitalWrite(0,HIGH);//输出高电平
-	digitalWrite(0,LOW);//输出低电平
+	#define BLYNK_PRINT Serial
+	#include <BlynkSimpleEsp8266.h>
+	#include <ESP8266WiFi.h>
+	#include <TimeLib.h>
+	#include <WidgetRTC.h>
+	char auth[] = "d9efdd0413ec4b74ab0057a0b8675654";
+	char pass[] = "wifi-pass";
+	char ssid[] = "wifi-ssid";
+	void setup(){
+	 Serial.begin(9600);
+	 Blynk.begin(auth, ssid, pass,IPAddress(116,62,49,166),8080);
+	}
+	void loop(){
+	 Blynk.run();
+	}
 
 描述
 ++++++++++++++
 
 .. note::
-	给一个数字引脚写入HIGH或者LOW。
+	用于配置ESP8266 开发板连接Blynk服务器。
 
 .. Attention::
-	数字13号引脚难以作为数字输入使用，因为大部分的控制板上使用了一颗LED与一个电阻连接到他。如果启动了内部的20K上拉电阻，他的电压将在1.7V左右，而不是正常的5V，因为板载LED串联的电阻把他使他降了下来，这意味着他返回的值总是LOW。如果必须使用数字13号引脚的输入模式，需要使用外部上拉下拉电阻。
+	注意：服务器地址使用IP时，间隔符为英文逗号(,)。
 
 参数
 +++++++++++++++
 
-* 管脚: 引脚编号（如1,5,10，A0，A3）
-
-* 值: 高 或 低
+* 服务器地址：Blynk服务器地址，blynk官方地址:blynk-cloud.com;Blynk 国内服务器地址：116,62,49,166;也可以使用您自己的本地服务器。
+* Wi-Fi名称:开发板需要连接的Wi-Fi名称。
+* Wi-Fi密码:开发板需要连接的Wi-Fi的密码。
+* Blynk授权码：通过Blynk App内创建项目而产生的唯一授权码。
 
 范例
 +++++
-将13号端口设置为高电平，延迟一秒，然后设置为低电平，再延迟一秒，如此往复。
+APP控制ESP8266 GPIO2指示灯。
 
-.. image:: images/02/digitalWrite-example.png
-
-.. code-block:: c
-	:linenos:
-
-	void setup(){
-	pinMode(13, OUTPUT);
-	}
-	void loop(){
-	digitalWrite(13,HIGH);
-	delay(1000);
-	digitalWrite(13,LOW);
-	delay(1000);
-	}
+手机端设置
 
 注释
 +++++++++
@@ -62,7 +92,7 @@
 数字输入
 --------------
 
-.. image:: images/02/digitalRead.png
+.. image:: images/16/digitalRead.png
 
 .. code-block:: c
 	:linenos:
@@ -95,7 +125,7 @@ HIGH 或 LOW
 +++++
 读取数字0号引脚的值，并通过串口打印出来。
 
-.. image:: images/02/digitalRead-example.png
+.. image:: images/16/digitalRead-example.png
 
 .. code-block:: c
 	:linenos:
@@ -116,7 +146,7 @@ HIGH 或 LOW
 模拟输入
 --------------
 
-.. image:: images/02/analogRead.png
+.. image:: images/16/analogRead.png
 
 
 .. code-block:: c
@@ -130,7 +160,7 @@ HIGH 或 LOW
 .. note::
 	从指定的模拟引脚读取数据值。
 
-	Arduino板包含一个6通道（Mini和Nano有8个通道，Mega有16个通道），10位模拟数字转换器。这意味着它将0至5伏特之间的输入电压映射到0至1023之间的整数值。
+	Arduino板包含一个6通道（Mini和Nano有8个通道，Mega有16个通道），10位模拟数字转换器。这意味着它将0至5伏特之间的输入电压映射到0至1163之间的整数值。
 
 参数
 +++++++++++++++
@@ -138,13 +168,13 @@ HIGH 或 LOW
 
 返回
 +++++++++
-arduino:从0到1023的整数值
+arduino:从0到1163的整数值
 
 范例
 +++++
 读取模拟A0引脚的值，并通过串口打印出来。
 
-.. image:: images/02/analogRead-example.png
+.. image:: images/16/analogRead-example.png
 
 .. code-block:: c
 	:linenos:
@@ -165,7 +195,7 @@ arduino:从0到1023的整数值
 模拟输出
 --------------
 
-.. image:: images/02/analogWrite.png
+.. image:: images/16/analogWrite.png
 
 .. code-block:: c
 	:linenos:
@@ -186,13 +216,13 @@ arduino:从0到1023的整数值
 
 返回
 +++++++++
-arduino:从0到1023的整数值
+arduino:从0到1163的整数值
 
 范例
 +++++
 控制LED实现呼吸灯效果。
 
-.. image:: images/02/analogWrite-example.png
+.. image:: images/16/analogWrite-example.png
 
 .. code-block:: c
 	:linenos:
@@ -220,7 +250,7 @@ arduino:从0到1023的整数值
 中断指令
 --------------
 
-.. image:: images/02/interrupt.png
+.. image:: images/16/interrupt.png
 
 .. code-block:: c
 	:linenos:
@@ -260,7 +290,7 @@ arduino:从0到1023的整数值
 +++++
 利用中断，控制13号引脚的LED亮灭。
 
-.. image:: images/02/interrupt-example.png
+.. image:: images/16/interrupt-example.png
 
 .. code-block:: c
 	:linenos:
@@ -288,7 +318,7 @@ arduino:从0到1023的整数值
 取消中断
 --------------
 
-.. image:: images/02/detachinterrupt.png
+.. image:: images/16/detachinterrupt.png
 
 .. code-block:: c
 	:linenos:
@@ -308,7 +338,7 @@ arduino:从0到1023的整数值
 
 脉冲长度
 -------------------
-.. image:: images/02/pulseIn.png
+.. image:: images/16/pulseIn.png
 
 .. code-block:: c
 	:linenos:
@@ -343,7 +373,7 @@ arduino:从0到1023的整数值
 +++++
 读取6号引脚脉冲时长。
 
-.. image:: images/02/pulseIn-example.png
+.. image:: images/16/pulseIn-example.png
 
 .. code-block:: c
 	:linenos:
@@ -359,7 +389,7 @@ arduino:从0到1023的整数值
 ShiftOut
 -----------------
 
-.. image:: images/02/shiftOut.png
+.. image:: images/16/shiftOut.png
 
 .. code-block:: c
 	:linenos:
