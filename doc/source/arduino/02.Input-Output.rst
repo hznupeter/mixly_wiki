@@ -13,6 +13,8 @@
 数字输出
 --------------
 
+.. image:: images/02/digitalWrite.png
+
 .. code-block:: c
 	:linenos:
 
@@ -67,15 +69,9 @@
 .. code-block:: c
 	:linenos:
 
-	void setup(){
-	pinMode(13, OUTPUT);
-	}
-	void loop(){
-	digitalWrite(13,HIGH);
-	delay(1000);
-	digitalWrite(13,LOW);
-	delay(1000);
-	}
+	digitalRead(0);
+
+
 
 描述
 ++++++++++++++
@@ -138,7 +134,7 @@ HIGH 或 LOW
 
 返回
 +++++++++
-arduino:从0到1023的整数值
+从0到1023的整数值
 
 范例
 +++++
@@ -152,7 +148,6 @@ arduino:从0到1023的整数值
 	void setup(){
 	Serial.begin(9600);
 	}
-
 	void loop(){
 	Serial.println(analogRead(A0));
 	}
@@ -184,9 +179,7 @@ arduino:从0到1023的整数值
 * 管脚:引脚编号（如3,5,6,9,10,11）不同的开发板模拟输入引脚数量不一样。
 * 赋值:0（完全关闭）到255（完全打开）之间。
 
-返回
-+++++++++
-arduino:从0到1023的整数值
+
 
 范例
 +++++
@@ -258,7 +251,7 @@ arduino:从0到1023的整数值
 
 范例
 +++++
-利用中断，控制13号引脚的LED亮灭。
+利用2号引脚中断，控制13号引脚的LED亮灭。
 
 .. image:: images/02/interrupt-example.png
 
@@ -293,7 +286,7 @@ arduino:从0到1023的整数值
 .. code-block:: c
 	:linenos:
 
-  detachInterrupt(digitalPinToInterrupt(2));
+	detachInterrupt(digitalPinToInterrupt(2));
 
 描述
 ++++++++++++++

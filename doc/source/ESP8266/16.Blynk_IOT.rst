@@ -16,7 +16,7 @@ Blynk App 下载
 .. Attention::
 	请不要使用微信扫描该二维码，微信会屏蔽该二维码。可以使用手机浏览器自带的二维码扫描功能。
 
-苹果用户直接在app store 中搜索blynk
+苹果用户直接在app store 中搜索blynk并下载。
 
 .. image:: images/16/apple_app.png
 
@@ -31,6 +31,7 @@ Blynk账号注册
 
 Blynk账号登录
 -----------------
+
 注册好账号之后，就可以登录Blynk App了。
 
 .. image:: images/16/sign_in.png
