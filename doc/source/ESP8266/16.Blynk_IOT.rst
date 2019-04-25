@@ -140,3 +140,9 @@ Blynk账号登录
 
 .. image:: images/16/anxinke_qr.png
 
+点击右下角的wifi配置
+.. image:: images/16/anxinke2.png
+
+
+点击右下角的wifi配置
+.. image:: images/16/anxinke2.png
