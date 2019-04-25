@@ -135,4 +135,3 @@ make latexpdf
 ### 查看文件
 
 进入编译结果目录_xxx/latex可以看到xxx.pdf文件
-readme
