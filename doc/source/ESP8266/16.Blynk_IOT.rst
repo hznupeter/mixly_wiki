@@ -53,11 +53,11 @@ Blynk账号登录
 	char pass[] = "wifi-pass";
 	char ssid[] = "wifi-ssid";
 	void setup(){
-		Serial.begin(9600);
-		Blynk.begin(auth, ssid, pass,IPAddress(116,62,49,166),8080);
+	  Serial.begin(9600);
+	  Blynk.begin(auth, ssid, pass,IPAddress(116,62,49,166),8080);
 	}
 	void loop(){
-		Blynk.run();
+	  Blynk.run();
 	}
 
 描述
@@ -72,7 +72,9 @@ Blynk账号登录
 参数
 +++++++++++++++
 
-* 服务器地址：Blynk服务器地址，Blynk官方地址:blynk-cloud.com;Blynk 国内服务器地址：116,62,49,166;也可以使用您自己的本地服务器。
+* 服务器地址：Blynk服务器地址，
+	* Blynk官方地址:blynk-cloud.com;Blynk 
+	* 国内服务器地址：116,62,49,166;也可以使用您自己的本地服务器。
 * Wi-Fi名称:开发板需要连接的Wi-Fi名称。
 * Wi-Fi密码:开发板需要连接的Wi-Fi的密码。
 * Blynk授权码：通过Blynk App内创建项目而产生的唯一授权码。
@@ -92,29 +94,29 @@ Blynk账号登录
 	#include <WidgetRTC.h>
 	char auth[] = "d9efdd0413ec4b74ab0057a0b8675654";
 	void setup(){
-		Serial.begin(9600);
-		WiFi.mode(WIFI_STA);
-		int cnt = 0;
-		while (WiFi.status() != WL_CONNECTED) {
-			delay(500);
-			Serial.print(".");
-			if (cnt++ >= 10) {
-				WiFi.beginSmartConfig();
-				while (1) {
-					delay(1000);
-					if (WiFi.smartConfigDone()) {
-						Serial.println();
-						Serial.println("SmartConfig: Success");
-						break;
-					}
-					Serial.print("|");
-				}
-			}
-		}  WiFi.printDiag(Serial);
-		Blynk.config(auth,IPAddress(116,62,49,166),8080);
+	  Serial.begin(9600);
+	  WiFi.mode(WIFI_STA);
+	  int cnt = 0;
+	  while (WiFi.status() != WL_CONNECTED) {
+	    delay(500);
+	    Serial.print(".");
+	    if (cnt++ >= 10) {
+	      WiFi.beginSmartConfig();
+	      while (1) {
+	        delay(1000);
+	        if (WiFi.smartConfigDone()) {
+	          Serial.println();
+	          Serial.println("SmartConfig: Success");
+	          break;
+	        }
+	        Serial.print("|");
+	      }
+	    }
+	  }WiFi.printDiag(Serial);
+	  Blynk.config(auth,IPAddress(116,62,49,166),8080);
 	}
 	void loop(){
-		Blynk.run();
+	  Blynk.run();
 	}
 
 描述
@@ -143,7 +145,6 @@ Blynk账号登录
 点击右下角的wifi配置
 
 .. image:: images/16/anxinke2.png
-
 
 点击 开始配置，稍等片刻即可配置完成。
 
@@ -239,6 +240,99 @@ Blynk账号登录
 
 * 发送数据：需要发送的数据，支持常量和变量。
 * 虚拟管脚：用于发送数据的虚拟管脚，需要与App端对应。
+
+范例
++++++++++++++++++++++
+
+LED组件开关
+-----------------------
+
+.. image:: images/16/widget_led.png
+
+.. code-block:: c
+	:linenos:
+
+	WidgetLED ledV0(V0);
+	void setup(){
+	}
+	void loop(){
+	  ledV0.setColor("#ff0000");
+	  ledV0.on();
+	}
+
+描述
+++++++++++++++
+
+设置手机端LED组件的颜色和开关。
+
+参数
++++++++++++++++
+
+* 虚拟管脚：App端LED组件的虚拟管脚值。
+* 颜色选择：选择LED组件的颜色。
+* 开关值：高为开，低为关。
+
+范例
++++++++++++++++++++++
+
+LED组件颜色及亮度设置
+-----------------------
+
+.. image:: images/16/widget_led_brightness.png
+
+.. code-block:: c
+	:linenos:
+
+	WidgetLED ledV0(V0);
+	void setup(){
+	}
+	void loop(){
+	  ledV0.setColor("#ff0000");
+	  ledV0.setValue(0);
+	}
+
+描述
+++++++++++++++
+
+设置手机端LED组件的颜色和亮度。
+
+参数
++++++++++++++++
+
+* 虚拟管脚：App端LED组件的虚拟管脚值。
+* 颜色选择：选择LED组件的颜色。
+* 亮度值：设置LED组件亮度，最暗为0，最亮100。
+
+范例
++++++++++++++++++++++
+
+
+Email组件
+-----------------------
+
+.. image:: images/16/widget_email.png
+
+.. code-block:: c
+	:linenos:
+
+	#define BLYNK_MAX_SENDBYTES 128
+	void setup(){
+	}
+	void loop(){
+	  Blynk.email("example@blynk.cc", "Subject", "Content");
+	}
+
+描述
+++++++++++++++
+
+给指定邮箱发送邮件。
+
+参数
++++++++++++++++
+
+* 邮箱地址：收件人邮箱地址。
+* 邮件主题：设置邮件主题，可以加入变量值。
+* 邮件内容：设置邮件内容，可以加入变量值。
 
 范例
 +++++++++++++++++++++
