@@ -96,7 +96,9 @@ https://www.docker.com/
 在桌面右下角状态栏中右键 docker 图标，修改在 Docker Daemon 标签页中的 json ，把下面的地址:
 ```http://f1361db2.m.daocloud.io```
 加到" registry-mirrors"的数组里。点击 Apply 。
+
 ### 编译 Dockerfile
+
 打开cmd，运行
 ```
 docker pull iccccing/shpinx-pdf-zh
@@ -119,6 +121,7 @@ latex_elements = {
 ```
 ### 运行容器
 打开cmd，运行:
+
 c/Users/Peter/Documents/GitHub/mixly_wiki/doc 为doc路径
 ```
 docker run -it -v c/Users/Peter/Documents/GitHub/mixly_wiki/doc:c/Users/Peter/Documents/GitHub/mixly_wiki/doc --name my-sphinx iccccing/sphinx-pdf-zh
