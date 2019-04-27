@@ -89,52 +89,41 @@ make html
 
 ## 支持pdf导出(高级应用)
 
-### 安装docker 
-https://www.docker.com/
-### 更改docker源
+### Mac 配置环境
 
-在桌面右下角状态栏中右键 docker 图标，修改在 Docker Daemon 标签页中的 json ，把下面的地址:
-```http://f1361db2.m.daocloud.io```
-加到" registry-mirrors"的数组里。点击 Apply 。
+Sphinx 生成 PDF 的过程先将 rst 转换为 tex，再生产PDF。这个过程遇到了比较多的坑，最后总结下来过程如下：
+首先，安装 Tex 环境。在 Mac 上，推荐安装 MacTex 而不是 BasicTex，对于新手来说 BasicTex 上需要自己处理很多以来问题。完成后使用 tlmgr 更新 TexLive。
 
-### 编译 Dockerfile
+$ brew cask install mactex
+$ sudo tlmgr update --self
 
-打开cmd，运行
-```
-docker pull iccccing/shpinx-pdf-zh
-```
-### 更改配置文件
-
-为了满足中文编码的支持，需要在config.py中设置如下参数：
-```
-# -- Options for LaTeX output ---------------------------------------------
-# 以下为LaTeX语法，可以配置编码格式、字体等，详解请自行百度
+然后，在 conf.py 中设置 latex_engine 和 latex_elements 两个参数。
+latex_engine = 'xelatex'
 latex_elements = {
-'preamble': '''
-\\hypersetup{unicode=true}
-\\usepackage{CJKutf8}
-\\AtBeginDocument{\\begin{CJK}{UTF8}{gbsn}}
-\\AtEndDocument{\\end{CJK}}
+    'papersize': 'a4paper',
+    'pointsize': '11pt',
+    'preamble': r'''
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=STZhongsong, ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\parindent 2em
+\definecolor{VerbatimColor}{rgb}{0.95,0.95,0.95}
+\setcounter{tocdepth}{3}
+\renewcommand\familydefault{\ttdefault}
+\renewcommand\CJKfamilydefault{\CJKrmdefault}
 '''
 }
 
-```
-### 运行容器
-打开cmd，运行:
+### 编译pdf
 
-c/Users/Peter/Documents/GitHub/mixly_wiki/doc 为doc路径
-```
-docker run -it -v c/Users/Peter/Documents/GitHub/mixly_wiki/doc:c/Users/Peter/Documents/GitHub/mixly_wiki/doc --name my-sphinx iccccing/sphinx-pdf-zh
+$ make latexpdf
 
-```
+make latexpdf 会完成 rst转换为 tex 并将 tex 生成 PDF，可以手动分开：
+$ make latex
+$ cd build/latex
+$ make
 
-### 进入容器
-docker exec -it my-sphinx bash
-
-### 开始编译
-```
-make latexpdf
-```
-### 查看文件
-
-进入编译结果目录_xxx/latex可以看到xxx.pdf文件
+在 build/latex 下可以查看到生成的 PDF 文档。
