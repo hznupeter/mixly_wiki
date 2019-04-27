@@ -48,7 +48,9 @@ http://www.sublimetext.com/
 
 在编写mixly wiki过程中可以参考 arduino语法。
 
-编写wiki所使用rst文档采用的是Sphinx，常用语法可以参考下面链接。https://www.cnblogs.com/zzqcn/p/5096876.html#_label7
+编写wiki所使用rst文档采用的是Sphinx，常用语法可以参考下面链接。
+https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+
 ## Arduino 语法参考
 http://www.cnblogs.com/xczr/p/7832015.html
 

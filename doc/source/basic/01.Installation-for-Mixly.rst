@@ -32,3 +32,4 @@
 双击Mixly目录下的Mixly.exe即可启动。
 
 .. image:: images/01/install3.jpg
+	 :width: 350pt
