@@ -15,6 +15,7 @@ Blynk IOT类别中包含了用所有跟Blynk物联网平台相关的命令。如
    05.Send_data.rst
    06.Widget_LED.rst
    07.Widget_Email.rst
+   30.Blynk_FAQ.rst
 
 
 
