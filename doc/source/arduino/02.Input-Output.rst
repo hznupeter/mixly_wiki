@@ -344,10 +344,10 @@ HIGH 或 LOW
 
 	void setup(){
 	  Serial.begin(9600);
-	  pinMode(0, INPUT);
+	  pinMode(6, INPUT);
 	}
 	void loop(){
-	  Serial.println(pulseIn(0, HIGH));
+	  Serial.println(pulseIn(6, HIGH));
 	}
 
 ShiftOut
