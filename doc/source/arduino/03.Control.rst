@@ -28,6 +28,20 @@
 
 .. image:: images/03/setup_example-1.png
 
+.. code-block:: c
+    :linenos:
+  
+	volatile int item;
+
+	void setup(){
+  		item = 0;
+	}
+
+	void loop(){
+
+	}
+
+
 范例
 +++++++++
 在初始化时定义中断函数。
@@ -76,6 +90,21 @@ while 循环
 
 .. image:: images/03/while_example.png
 
+.. codeblock:: c
+	:linenos:
+
+	void setup(){
+  		pinMode(13, OUTPUT);
+	}
+
+	void loop(){
+  		while (analogRead(A0)*0.488 > 30) {
+    		digitalWrite(13,HIGH);
+  	}
+  	digitalWrite(13,LOW);
+
+	}
+
 延时
 ---------------
 
@@ -97,6 +126,21 @@ while 循环
 13号引脚灯亮1秒，灭1秒，往复循环。
 
 .. image:: images/03/delay_example.png
+
+.. codeblock:: c
+	:linenos:
+
+	void setup(){
+  		pinMode(13, OUTPUT);
+	}
+
+	void loop(){
+  		digitalWrite(13,HIGH);
+  		delay(1000);
+  		digitalWrite(13,LOW);
+  		delay(1000);
+
+	}
 
 注释
 +++++++++++++++
@@ -135,11 +179,41 @@ while 循环
 
 .. image:: images/03/if_example1.png
 
+..codeblock:: c
+	:linenos:
+
+	void setup(){
+  		pinMode(2, INPUT);
+  		pinMode(13, OUTPUT);
+	}
+
+	void loop(){
+  		if (digitalRead(2) == 1) {
+    	digitalWrite(13,HIGH);
+  	}
+
+}
+
 如果判断的条件大于等于1时，可以省略等于判断，因为只要 该表达式的结果不为0，则为真。
 
 所以，上面的写法与下面的写法等效。
 
 .. image:: images/03/if_example3.png
+
+..codeblock:: c
+	:linenos:
+
+	void setup(){
+  		pinMode(2, INPUT);
+  		pinMode(13, OUTPUT);
+	}
+
+	void loop(){
+  		if (digitalRead(2)) {
+    	digitalWrite(13,HIGH);
+  	}
+
+}
 
 
 范例
@@ -148,6 +222,23 @@ while 循环
 当连接在2号引脚的按键按下时，点亮13号引脚的灯;当按键松开时，灯灭。
 
 .. image:: images/03/if_example2.png
+
+..codeblock:: c
+	:linenos:
+
+	oid setup(){
+  		pinMode(2, INPUT);
+  		pinMode(13, OUTPUT);
+	}
+
+	void loop(){
+  		if (digitalRead(2)) {
+    	digitalWrite(13,HIGH);
+  	} else {
+   	 	digitalWrite(13,LOW);
+  	}
+
+}
 
 注释
 +++++++++++++++
@@ -183,23 +274,27 @@ while 循环
 范例
 +++++++++
 
-当连接在2号引脚的按键按下时，点亮13号引脚的灯。
+当连接在2号引脚的按键按下时，点亮13号引脚的灯，否则13号引脚的灯灭
 
-.. image:: images/03/if_example1.png
+.. image:: images/03/switch_example.png
 
-如果判断的条件大于等于1时，可以省略等于判断，因为只要 该表达式的结果不为0，则为真。
+.. codeblock::c
+	:linenos:
 
-所以，上面的写法与下面的写法等效。
+	void setup(){
+  		pinMode(2, INPUT);
+  		pinMode(13, OUTPUT);
+	}
 
-.. image:: images/03/if_example3.png
+	void loop(){
+  		switch (true) {
+   			case digitalRead(2):
+    		digitalWrite(13,HIGH);
+   	 	break;
+  	}
 
+}
 
-范例
-+++++++++
-
-当连接在2号引脚的按键按下时，点亮13号引脚的灯;当按键松开时，灯灭。
-
-.. image:: images/03/if_example2.png
 
 注释
 +++++++++++++++
@@ -233,6 +328,8 @@ for循环
 
 范例
 +++++++++
+
+
 
 注释
 +++++++++++++++
