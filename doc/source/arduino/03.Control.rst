@@ -55,15 +55,12 @@
     void attachInterrupt_fun_2() {
     digitalWrite(13,HIGH);
     }
-
     void setup(){
     pinMode(2, INPUT);
     pinMode(13, OUTPUT);
     attachInterrupt(digitalPinToInterrupt(2),attachInterrupt_fun_2,RISING);
     }
-
     void loop(){
-
     }
 
 
@@ -90,19 +87,17 @@ while 循环
 
 .. image:: images/03/while_example.png
 
-.. codeblock:: c
+.. code-block:: c
 	:linenos:
 
 	void setup(){
   		pinMode(13, OUTPUT);
 	}
-
 	void loop(){
   		while (analogRead(A0)*0.488 > 30) {
     		digitalWrite(13,HIGH);
   	}
   	digitalWrite(13,LOW);
-
 	}
 
 延时
@@ -127,7 +122,7 @@ while 循环
 
 .. image:: images/03/delay_example.png
 
-.. codeblock:: c
+.. code-block:: c
 	:linenos:
 
 	void setup(){
@@ -179,20 +174,18 @@ while 循环
 
 .. image:: images/03/if_example1.png
 
-..codeblock:: c
+.. code-block:: c
 	:linenos:
 
 	void setup(){
-  		pinMode(2, INPUT);
-  		pinMode(13, OUTPUT);
+	  pinMode(2, INPUT);
+	  pinMode(13, OUTPUT);
 	}
-
 	void loop(){
-  		if (digitalRead(2) == 1) {
-    	digitalWrite(13,HIGH);
-  	}
-
-}
+	  if (digitalRead(2) == 1) {
+	    digitalWrite(13,HIGH);
+	  }
+	}
 
 如果判断的条件大于等于1时，可以省略等于判断，因为只要 该表达式的结果不为0，则为真。
 
@@ -200,20 +193,18 @@ while 循环
 
 .. image:: images/03/if_example3.png
 
-..codeblock:: c
+.. code-block:: c
 	:linenos:
 
 	void setup(){
   		pinMode(2, INPUT);
   		pinMode(13, OUTPUT);
 	}
-
 	void loop(){
   		if (digitalRead(2)) {
     	digitalWrite(13,HIGH);
   	}
-
-}
+	}
 
 
 范例
@@ -223,22 +214,20 @@ while 循环
 
 .. image:: images/03/if_example2.png
 
-..codeblock:: c
+.. code-block:: c
 	:linenos:
 
-	oid setup(){
+	void setup(){
   		pinMode(2, INPUT);
   		pinMode(13, OUTPUT);
 	}
-
 	void loop(){
   		if (digitalRead(2)) {
     	digitalWrite(13,HIGH);
   	} else {
    	 	digitalWrite(13,LOW);
   	}
-
-}
+	}
 
 注释
 +++++++++++++++
@@ -278,22 +267,20 @@ while 循环
 
 .. image:: images/03/switch_example.png
 
-.. codeblock::c
+.. code-block:: c
 	:linenos:
 
 	void setup(){
   		pinMode(2, INPUT);
   		pinMode(13, OUTPUT);
 	}
-
 	void loop(){
   		switch (true) {
    			case digitalRead(2):
     		digitalWrite(13,HIGH);
    	 	break;
   	}
-
-}
+	}
 
 
 注释
