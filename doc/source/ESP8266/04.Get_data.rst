@@ -49,16 +49,50 @@
 App端通过虚拟管脚发送数值，控制舵机的转动。
 
 硬件连接
---------------
++++++++++++++++
+
 .. image:: images/16/get_data_example.png
 
+编写程序
++++++++++++++++++
+
+.. image:: images/16/get_data_code.png
+	:width: 400pt
+
+.. code-block:: c
+	:linenos:
+
+	#define BLYNK_PRINT Serial
+	#include <BlynkSimpleEsp8266.h>
+	#include <ESP8266WiFi.h>
+	#include <Servo.h>
+	#include <TimeLib.h>
+	#include <WidgetRTC.h>
+	char auth[] = "d9efdd0413ec4b74ab0057a0b8675654";
+	int vpin_value;
+	Servo servo_12;
+	char pass[] = "wifi-pass";
+	char ssid[] = "wifi-ssid";
+	BLYNK_WRITE(V0) {
+	  vpin_value= param.asInt();
+	  servo_12.write(vpin_value);
+	  delay(0);
+	}
+	void setup(){
+	  Serial.begin(9600);
+	  Blynk.begin(auth, ssid, pass,IPAddress(116,62,49,166),8080);
+	  servo_12.attach(12);
+	}
+	void loop(){
+	  Blynk.run();
+	}
 
 APP设置
---------------
+++++++++++++
 
 .. image:: images/16/get_data_app.png
 
 效果
-----------------
-
++++++++++++
+.. image:: images/16/get_data_example_video.png
 
