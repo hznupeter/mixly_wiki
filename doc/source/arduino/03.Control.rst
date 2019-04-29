@@ -32,13 +32,10 @@
     :linenos:
   
 	volatile int item;
-
 	void setup(){
-  		item = 0;
+	  item = 0;
 	}
-
 	void loop(){
-
 	}
 
 
@@ -53,12 +50,12 @@
     :linenos:
   
     void attachInterrupt_fun_2() {
-    digitalWrite(13,HIGH);
+      digitalWrite(13,HIGH);
     }
     void setup(){
-    pinMode(2, INPUT);
-    pinMode(13, OUTPUT);
-    attachInterrupt(digitalPinToInterrupt(2),attachInterrupt_fun_2,RISING);
+      pinMode(2, INPUT);
+      pinMode(13, OUTPUT);
+      attachInterrupt(digitalPinToInterrupt(2),attachInterrupt_fun_2,RISING);
     }
     void loop(){
     }
@@ -91,11 +88,11 @@ while 循环
 	:linenos:
 
 	void setup(){
-  		pinMode(13, OUTPUT);
+  	  pinMode(13, OUTPUT);
 	}
 	void loop(){
-  		while (analogRead(A0)*0.488 > 30) {
-    		digitalWrite(13,HIGH);
+  	  while (analogRead(A0)*0.488 > 30) {
+        digitalWrite(13,HIGH);
   	}
   	digitalWrite(13,LOW);
 	}
@@ -126,15 +123,13 @@ while 循环
 	:linenos:
 
 	void setup(){
-  		pinMode(13, OUTPUT);
+	  pinMode(13, OUTPUT);
 	}
-
 	void loop(){
-  		digitalWrite(13,HIGH);
-  		delay(1000);
-  		digitalWrite(13,LOW);
-  		delay(1000);
-
+	  digitalWrite(13,HIGH);
+	  delay(1000);
+	  digitalWrite(13,LOW);
+	  delay(1000);
 	}
 
 注释
