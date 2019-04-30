@@ -2,7 +2,7 @@
 从App获取数据
 ================
 
-.. image:: images/16/get_data_from_app.png
+.. image:: images/16/get_data.png
 
 .. code-block:: c
 	:linenos:
@@ -51,12 +51,12 @@ App端通过虚拟管脚发送数值，控制舵机的转动。
 硬件连接
 +++++++++++++++
 
-.. image:: images/16/get_data_example.png
+.. image:: images/16/get_data_example_connect.png
 
 编写程序
 +++++++++++++++++
 
-.. image:: images/16/get_data_code.png
+.. image:: images/16/get_data_example_code.png
 	:width: 400pt
 
 .. code-block:: c

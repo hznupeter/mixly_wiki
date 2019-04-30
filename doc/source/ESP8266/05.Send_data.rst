@@ -3,7 +3,7 @@
 
 开发板发送数据到App的虚拟管脚。
 
-.. image:: images/16/send_data_to_App.png
+.. image:: images/16/send_data.png
 
 .. code-block:: c
 	:linenos:
@@ -48,12 +48,12 @@
 
 硬件连接
 +++++++++++
-.. image:: images/16/send_data_hardware.png
+.. image:: images/16/send_data_example_connect.png
 
 编写程序
 +++++++++++++++++
 
-.. image:: images/16/send_data_code.png
+.. image:: images/16/send_data_example_code.png
 
 .. code-block:: c
 	:linenos:

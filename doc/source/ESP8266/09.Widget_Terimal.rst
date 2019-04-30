@@ -1,17 +1,18 @@
 
-通知组件
+终端组件
 ===========
 
-.. image:: images/16/widget_notify_module.png
+.. image:: images/16/widget_terminal_module.png
 
 .. code-block:: c
 	:linenos:
 
 	Blynk.notify("通知内容");
 
-App端 Notify组件
 
-.. image:: images/16/widget_notify.png
+App端 Terminal组件
+
+.. image:: images/16/widget_terminal.png
 
 描述
 -----------

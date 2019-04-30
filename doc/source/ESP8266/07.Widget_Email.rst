@@ -2,7 +2,7 @@
 Email组件
 ===========
 
-.. image:: images/16/widget_email.png
+.. image:: images/16/widget_email_module.png
 
 .. code-block:: c
 	:linenos:
@@ -13,6 +13,10 @@ Email组件
 	void loop(){
 	  Blynk.email("example@blynk.cc", "Subject", "Content");
 	}
+
+App端 Email组件
+
+.. image:: images/16/widget_email.png
 
 描述
 -----------

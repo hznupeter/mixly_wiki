@@ -1,7 +1,7 @@
 LED组件
 =========
 
-.. image:: images/16/widget_led.png
+.. image:: images/16/widget_led_module.png
 
 .. code-block:: c
 	:linenos:
@@ -13,6 +13,10 @@ LED组件
 	  ledV0.setColor("#ff0000");
 	  ledV0.on();
 	}
+
+App端 LED组件
+
+.. image:: images/16/widget_led.png
 
 描述
 ------
