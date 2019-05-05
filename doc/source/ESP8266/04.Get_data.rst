@@ -96,3 +96,65 @@ APP设置
 +++++++++++
 .. image:: images/16/get_data_example_video.png
 
+范例2：远程控制七彩灯
+---------------------
+
+App端添加斑马取色组件，通过斑马取色组件发送颜色值。
+开发板收到颜色值后控制七彩灯发光。
+
+硬件连接
++++++++++++++++
+
+.. image:: images/16/get_data_example2_connect.png
+
+编写程序
++++++++++++++++++
+
+.. image:: images/16/get_data_example2_code.png
+
+
+.. code-block:: c
+	:linenos:
+
+	#define BLYNK_PRINT Serial
+	#include <Adafruit_NeoPixel.h>
+	#include <BlynkSimpleEsp8266.h>
+	#include <ESP8266WiFi.h>
+	#include <TimeLib.h>
+	#include <WidgetRTC.h>
+	char auth[] = "d9efdd0413ec4b74ab0057a0b8675654";
+	int R,G,B;
+	Adafruit_NeoPixel  rgb_display_12= Adafruit_NeoPixel(4,12,NEO_GRB + NEO_KHZ800);
+	char pass[] = "wifi-pass";
+	char ssid[] = "wifi-ssid";
+	BLYNK_WRITE(V0) {
+	  R= param[0].asInt();
+	  G= param[1].asInt();
+	  B= param[2].asInt();
+	  Serial.println(vpin_value);
+	  rgb_display_12.setPixelColor(1-1, rgb_display_12.Color(R,G,B));
+	  rgb_display_12.setPixelColor(2-1, rgb_display_12.Color(R,G,B));
+	  rgb_display_12.setPixelColor(3-1, rgb_display_12.Color(R,G,B));
+	  rgb_display_12.setPixelColor(4-1, rgb_display_12.Color(R,G,B));
+	  rgb_display_12.show();
+	}
+	void setup(){
+	  Serial.begin(9600);
+	  Blynk.begin(auth, ssid, pass,IPAddress(116,62,49,166),8080);
+	  rgb_display_12.begin();
+	  rgb_display_12.setBrightness(20);
+	  Serial.begin(9600);
+	}
+	void loop(){
+	  Blynk.run();
+	}
+
+APP设置
+++++++++++++
+
+.. image:: images/16/get_data_app2.png
+
+效果
++++++++++++
+.. image:: images/16/get_data_example_video.png
+
