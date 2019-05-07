@@ -192,12 +192,12 @@ while 循环
 	:linenos:
 
 	void setup(){
-  		pinMode(2, INPUT);
-  		pinMode(13, OUTPUT);
+	  pinMode(2, INPUT);
+ 	  pinMode(13, OUTPUT);
 	}
 	void loop(){
-  		if (digitalRead(2)) {
-    	digitalWrite(13,HIGH);
+ 	  if (digitalRead(2)) {
+	    digitalWrite(13,HIGH);
   	}
 	}
 
@@ -213,14 +213,14 @@ while 循环
 	:linenos:
 
 	void setup(){
-  		pinMode(2, INPUT);
-  		pinMode(13, OUTPUT);
+	  pinMode(2, INPUT);
+	  pinMode(13, OUTPUT);
 	}
 	void loop(){
-  		if (digitalRead(2)) {
-    	digitalWrite(13,HIGH);
+	  if (digitalRead(2)) {
+	    digitalWrite(13,HIGH);
   	} else {
-   	 	digitalWrite(13,LOW);
+	  digitalWrite(13,LOW);
   	}
 	}
 
@@ -266,14 +266,14 @@ while 循环
 	:linenos:
 
 	void setup(){
-  		pinMode(2, INPUT);
-  		pinMode(13, OUTPUT);
+	  pinMode(2, INPUT);
+	  pinMode(13, OUTPUT);
 	}
 	void loop(){
-  		switch (true) {
-   			case digitalRead(2):
-    		digitalWrite(13,HIGH);
-   	 	break;
+	  switch (true) {
+	    case digitalRead(2):
+	    digitalWrite(13,HIGH);
+	  break;
   	}
 	}
 
