@@ -304,21 +304,86 @@ for循环
 
 用法
 +++++++++++++++
-增加case：如果需要增加条件，可以点开齿轮，然后将左侧的“case”或者“default”模块拖到右侧的“switch”之中。
+可自行设置循环的变量名称，并确定循环的开始和终止以及循环方向，最后一个数字可以为负数。
 
-.. image:: images/03/switch2.png
+.. image:: images/03/for2.png
 
 范例
 +++++++++
 
+将连接在3号引脚的灯制作成呼吸灯，每一次亮度变化之间间隔50毫秒
 
+.. image:: images/03/for_example.png
+
+.. code-block:: c
+	:linenos:
+
+	void setup(){
+	}
+	void loop(){
+	  for (int i = 0; i <= 255; i = i + (1)) {
+	    analogWrite(3,i);
+	    delay(50);
+	}
+	  for (int i = 255; i >= 0; i = i + (-1)) {
+	    analogWrite(3,i);
+	    delay(50);
+	}
+	}
 
 注释
 +++++++++++++++
-	每个switch可以有多个case，但是最多不超过一个default，当不满足任何一个case时，执行default中的程序。
+	for循环中定义的变量有名字，可以用字母i,j,k或单词red,state等有意义的词语表示。
 
 跳出循环
 -------------
+
+.. image:: images/03/break.png
+
+描述
+++++++++++++++
+
+.. note::
+	跳出循环用于终止一段重复的程序，一般使用时作为条件语句的执行部分，当循环中的变量满足某个条件时，执行跳出循环语句。
+
+	跳出循环在处理循环中的特殊情况时十分有用。
+
+参数
++++++++++++++++
+* 操作：可以选择跳出循环和跳到下一个循环两种操作，结果不同。
+
+用法
++++++++++++++++
+可直接加到循环语句当中，一般自行添加条件语句进行判断，判断为真时执行跳出循环语句。
+
+.. image:: images/03/break2.png
+
+范例
++++++++++
+
+引脚3上的数字从0到255逐一增加，每一次增加之间间隔50毫秒，当数字增加到150时停止增加
+
+.. image:: images/03/break_example.png
+
+.. code-block:: c
+	:linenos:
+
+	void setup(){
+	  pinMode(3, INPUT);
+	  }
+	void loop(){
+	  for (int i = 0; i <= 255; i = i + (1)) {
+	    if (digitalRead(3) == 150) {
+	      break;
+	}
+	    analogWrite(3,i);
+	    delay(50);
+	}
+	}
+
+注释
++++++++++++++++
+	注意跳到下一个循环的使用，可以方便的将循环中不需要的步骤跳过。
 
 系统运行时间
 ---------------
