@@ -394,7 +394,7 @@ for循环
 ++++++++++++++
 
 .. note::
-		返回自硬件启动或重启以来的时间值。
+	返回自硬件启动或重启以来的时间值。
 
 返回
 +++++++++++++++
@@ -402,16 +402,29 @@ for循环
 
 用法
 +++++++++++++++
-增加case：如果需要增加条件，可以点开齿轮，然后将左侧的“case”或者“default”模块拖到右侧的“switch”之中。
+返回系统运行时间，赋给某一变量，进行进一步的功能设计。
 
-.. image:: images/03/switch2.png
+.. image:: images/03/millis2.png
 
 范例
 +++++++++
 
-注释
-+++++++++++++++
-	每个switch可以有多个case，但是最多不超过一个default，当不满足任何一个case时，执行default中的程序。
+自动换行打印系统运行时间
+
+.. image:: images/03/millis_example.png
+
+.. code-block:: c
+	:linenos:
+
+	void setup(){
+	  Serial.begin(9600);
+	  pinMode(2, INPUT);
+	}
+	void loop(){
+	  if (digitalRead(2)) {
+	    Serial.println(millis());
+	  }
+	}
 
 MsTimer2 定时器
 ---------------
@@ -422,11 +435,12 @@ MsTimer2 定时器
 ++++++++++++++
 
 .. note::
-		返回自硬件启动或重启以来的时间值。
+	每隔设置的毫秒数执行相应的程序
 
 用法
 +++++++++++++++
-增加case：如果需要增加条件，可以点开齿轮，然后将左侧的“case”或者“default”模块拖到右侧的“switch”之中。
+设置计时器的时间：计时器的时间可以进行修改。
+主要用于设计定时改变状态的程序，可以通过计时器时间间隔设置进行状态会更改程序的运行。
 
 范例
 +++++++++
@@ -462,7 +476,29 @@ MsTimer2 定时器
 MsTimer2 定时器启动
 ----------------------
 
+.. image:: images/03/mstimer2begin.png
 
+描述
+++++++++++++++
+
+.. note::
+	MsTimer2定时器开始计时
+
+用法
++++++++++++++++
+需要使用MsTimer2计时器时，需要先插入MsTimer2定时器启动模块，开始计时，需要与MsTimer2定时器配合使用。
 
 MsTimer2 定时器停止
 -----------------------
+
+.. image:: images/03/mstimer2stop.png
+
+描述
+++++++++++++++
+
+.. note::
+	MsTimer2定时器停止计时
+
+用法
++++++++++++++++
+需要使用MsTimer2计时器时，需要先插入MsTimer2定时器启动模块，开始计时，需要与MsTimer2定时器配合使用，插入停止模块后计时器停止计时。
