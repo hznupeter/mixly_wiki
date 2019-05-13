@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 19:08+0800\n"
+"POT-Creation-Date: 2019-05-13 21:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../source/arduino/05.Text.rst:2
-msgid "文本"
+msgid "文本(普通视图)"
 msgstr ""
 
 #: ../../source/arduino/05.Text.rst:3
@@ -28,4 +28,51 @@ msgstr ""
 #: ../../source/arduino/05.Text.rst:7
 msgid "所有文本内容可通过串口监视器或外接显示屏打印。"
 msgstr ""
+
+#: ../../source/arduino/05.Text.rst:10
+msgid "字符串"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:16
+msgid "字符"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:22
+msgid "字符串连接"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:28
+msgid "字符串转数字"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:33
+msgid "转ASCII字符"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:39
+msgid "转ASCII数值"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:45
+msgid "进制 转字符串"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:50
+msgid "获取字符串长度"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:55
+msgid "获取字符串第N个字符"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:60
+msgid "字符串比较1"
+msgstr ""
+
+#: ../../source/arduino/05.Text.rst:65
+msgid "字符串比较2"
+msgstr ""
+
+#~ msgid "文本"
+#~ msgstr ""
 

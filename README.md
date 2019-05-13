@@ -64,6 +64,52 @@ https://www.arduino.cc/reference/en/
 
 显示效果可以参考 https://mixly-wiki-test.readthedocs.io/zh_CN/latest/arduino/02.Input-Output.html
 
+## 翻译
+### 安装sphinx-intl.
+
+```$ pip install sphinx-intl```
+
+### 修改配置文件
+在 conf.py中添加以下内容：
+```
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
+```
+### 生成pot文件
+运行以下命令
+```
+make gettext
+```
+生成新目录 ：doc/build/gettext
+
+### 生成英文翻译文件
+```
+sphinx-intl update -p build/gettext -l en
+```
+执行完成后，产生如下目录
+```source/locale/en/LC_MESSAGES/```
+
+### 翻译po文件
+打开```source/locale/en/LC_MESSAGES/```目录下的po文件，进行翻译。
+
+如：
+```#: ../../source/arduino/02.Input-Output.rst:2
+msgid "输入/输出 (普通视图)"
+msgstr ""
+```
+```
+#: ../../source/arduino/02.Input-Output.rst:2
+msgid "输入/输出 (普通视图)"
+msgstr "Input/Output(Normal)"
+```
+
+### 编译html文档
+
+```
+set SPHINXOPTS=-D language=de
+.\make.bat html
+```
+
 ## 提交代码
 
 修改文本后，按照下图操作提交代码。
@@ -100,6 +146,7 @@ $ brew cask install mactex
 $ sudo tlmgr update --self
 
 然后，在 conf.py 中设置 latex_engine 和 latex_elements 两个参数。
+```
 latex_engine = 'xelatex'
 latex_elements = {
     'papersize': 'a4paper',
@@ -118,7 +165,7 @@ latex_elements = {
 \renewcommand\CJKfamilydefault{\CJKrmdefault}
 '''
 }
-
+```
 ### 编译pdf
 
 $ make latexpdf

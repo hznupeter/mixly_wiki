@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 19:08+0800\n"
+"POT-Creation-Date: 2019-05-13 21:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,13 @@ msgstr ""
 "Generated-By: Babel 2.6.0\n"
 
 #: ../../source/arduino/11.Actuator.rst:2
-msgid "执行器"
+msgid "执行器(普通视图)"
 msgstr ""
 
 #: ../../source/arduino/11.Actuator.rst:3
 msgid "执行模块：声音播放、舵机控制、I2C液晶模块"
 msgstr ""
+
+#~ msgid "执行器"
+#~ msgstr ""
 
