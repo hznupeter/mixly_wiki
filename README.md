@@ -64,10 +64,10 @@ https://www.arduino.cc/reference/en/
 
 显示效果可以参考 https://mixly-wiki-test.readthedocs.io/zh_CN/latest/arduino/02.Input-Output.html
 
-## 翻译
+## 翻译wiki
 ### 安装sphinx-intl.
 
-```$ pip install sphinx-intl```
+```pip install sphinx-intl```
 
 ### 修改配置文件
 在 conf.py中添加以下内容：
@@ -76,11 +76,11 @@ locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 ```
 ### 生成pot文件
-运行以下命令
+运行以下命令生成pot文件
 ```
 make gettext
 ```
-生成新目录 ：doc/build/gettext
+运行完成后会生成新目录 ：```doc/build/gettext```
 
 ### 生成英文翻译文件
 ```
@@ -93,7 +93,8 @@ sphinx-intl update -p build/gettext -l en
 打开```source/locale/en/LC_MESSAGES/```目录下的po文件，进行翻译。
 
 如原始：
-```#: ../../source/arduino/02.Input-Output.rst:2
+```
+#: ../../source/arduino/02.Input-Output.rst:2
 msgid "输入/输出 (普通视图)"
 msgstr ""
 ```
@@ -103,6 +104,7 @@ msgstr ""
 msgid "输入/输出 (普通视图)"
 msgstr "Input/Output(Normal)"
 ```
+即，msgid为翻译前语言的内容，msgstr为翻译后语言的内容。
 
 ### 编译html文档
 
@@ -110,11 +112,13 @@ msgstr "Input/Output(Normal)"
 set SPHINXOPTS=-D language=en
 .\make.bat html
 ```
+
 ### 查看最终效果
 
 将文档提交到github，打开wiki页面，https://mixly-wiki-test.readthedocs.io
 
 左下角打开功能框，切换到en，查看效果。
+
 ## 提交代码
 
 修改文本后，按照下图操作提交代码。
