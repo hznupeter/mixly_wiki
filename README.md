@@ -92,11 +92,12 @@ sphinx-intl update -p build/gettext -l en
 ### 翻译po文件
 打开```source/locale/en/LC_MESSAGES/```目录下的po文件，进行翻译。
 
-如：
+如原始：
 ```#: ../../source/arduino/02.Input-Output.rst:2
 msgid "输入/输出 (普通视图)"
 msgstr ""
 ```
+翻译后：
 ```
 #: ../../source/arduino/02.Input-Output.rst:2
 msgid "输入/输出 (普通视图)"
@@ -106,10 +107,14 @@ msgstr "Input/Output(Normal)"
 ### 编译html文档
 
 ```
-set SPHINXOPTS=-D language=de
+set SPHINXOPTS=-D language=en
 .\make.bat html
 ```
+### 查看最终效果
 
+将文档提交到github，打开wiki页面，https://mixly-wiki-test.readthedocs.io
+
+左下角打开功能框，切换到en，查看效果。
 ## 提交代码
 
 修改文本后，按照下图操作提交代码。
