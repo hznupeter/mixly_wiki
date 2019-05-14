@@ -185,3 +185,9 @@ $ cd build/latex
 $ make
 
 在 build/latex 下可以查看到生成的 PDF 文档。
+
+
+## Contributors
+
+This project exists thanks to all the people who contribute.
+<a href="graphs/contributors"><img src="https://opencollective.com/cheton/contributors.svg?width=890&button=false" /></a>
