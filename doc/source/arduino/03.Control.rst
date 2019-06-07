@@ -1,4 +1,4 @@
-控制(普通视图)
+控制
 =================
 
 控制类别中包括了时间延迟、条件执行、循环执行、获取运行时间、初始化、Switch执行等
@@ -502,3 +502,89 @@ MsTimer2 定时器停止
 用法
 +++++++++++++++
 需要使用MsTimer2计时器时，需要先插入MsTimer2定时器启动模块，开始计时，需要与MsTimer2定时器配合使用，插入停止模块后计时器停止计时。
+
+
+允许中断
+-------------------
+
+.. image:: images/03/allinterruption.png
+
+描述
+++++++++++++++
+
+.. note::
+	允许输入/输出模块中管脚中断的运行
+
+用法
++++++++++++++++
+主要用于加入禁止中断模块后恢复中断执行。
+
+范例
++++++++++
+使用按钮模拟开关，每次按下，LED灯切换亮灭
+
+.. image:: images/03/allinterruption_example.png
+
+
+.. code-block:: c
+	:linenos:
+
+	void attachInterrupt_fun_2() {
+	  digitalWrite(10,(!digitalRead(10)));
+	}
+	void setup(){
+	  pinMode(2, INPUT);
+	  pinMode(10, OUTPUT);
+	  interrupts();
+	  attachInterrupt(digitalPinToInterrupt(2),attachInterrupt_fun_2,RISING);
+	}
+	void loop(){
+	}
+
+禁止中断
+-------------------
+
+.. image:: images/03/nointerruption.png
+
+描述
+++++++++++++++
+
+.. note::
+	禁止输入/输出模块中管脚中断的运行
+
+用法
++++++++++++++++
+主要用于禁止中断模块的中断执行。
+
+范例
++++++++++
+在允许中断范例的基础上，尝试禁止中断
+
+.. image:: images/03/nointerruption_example.png
+
+
+.. code-block:: c
+	:linenos:
+
+	void attachInterrupt_fun_2() {
+	  digitalWrite(10,(!digitalRead(10)));
+	}
+	void setup(){
+	  pinMode(2, INPUT);
+	  pinMode(10, OUTPUT);
+	  noInterrupts();
+	  attachInterrupt(digitalPinToInterrupt(2),attachInterrupt_fun_2,RISING);
+	}
+	void loop(){
+	}
+
+SCoop Task
+-------------------
+
+
+执行SCoop
+------------------
+
+
+SCoop 延时
+------------------
