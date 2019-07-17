@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 21:23+0800\n"
+"POT-Creation-Date: 2019-07-17 21:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../source/arduino/13.Variables.rst:2
-msgid "变量(普通视图)"
+msgid "变量"
 msgstr ""
 
 #: ../../source/arduino/13.Variables.rst:3
@@ -32,5 +32,8 @@ msgid ""
 msgstr ""
 
 #~ msgid "变量"
+#~ msgstr ""
+
+#~ msgid "变量(普通视图)"
 #~ msgstr ""
 

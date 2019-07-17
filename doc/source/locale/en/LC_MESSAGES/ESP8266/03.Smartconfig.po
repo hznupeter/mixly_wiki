@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 21:23+0800\n"
+"POT-Creation-Date: 2019-07-17 21:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../source/ESP8266/03.Smartconfig.rst:2
 msgid "一键配网"
@@ -54,7 +54,7 @@ msgid "Blynk官方地址:blynk-cloud.com;"
 msgstr ""
 
 #: ../../source/ESP8266/03.Smartconfig.rst:58
-msgid "Blynk国内服务器地址：116,62,49,166;"
+msgid "Blynk国内服务器地址：116.62.49.166;"
 msgstr ""
 
 #: ../../source/ESP8266/03.Smartconfig.rst:59
@@ -80,4 +80,7 @@ msgstr ""
 #: ../../source/ESP8266/03.Smartconfig.rst:74
 msgid "点击 开始配置，稍等片刻即可配置完成。"
 msgstr ""
+
+#~ msgid "Blynk国内服务器地址：116,62,49,166;"
+#~ msgstr ""
 

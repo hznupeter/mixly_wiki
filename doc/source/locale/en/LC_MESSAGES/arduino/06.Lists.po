@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 21:23+0800\n"
+"POT-Creation-Date: 2019-07-17 21:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../source/arduino/06.Lists.rst:2
-msgid "数组(普通视图)"
+msgid "数组"
 msgstr ""
 
 #: ../../source/arduino/06.Lists.rst:3
@@ -65,5 +65,8 @@ msgstr ""
 #~ msgid ""
 #~ "数组是为了便于代码编写时所采用的一种数字块。具体包括：定义数组、取数组值、改数组值。 .. image:: "
 #~ "images/06/array1.png"
+#~ msgstr ""
+
+#~ msgid "数组(普通视图)"
 #~ msgstr ""
 

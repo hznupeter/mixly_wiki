@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 21:23+0800\n"
+"POT-Creation-Date: 2019-07-17 21:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../source/arduino/14.Functions.rst:2
-msgid "函数(普通视图)"
+msgid "函数"
 msgstr ""
 
 #: ../../source/arduino/14.Functions.rst:3
@@ -34,5 +34,8 @@ msgid "另外需要注意，如果使用函数指令，必须运行执行 blink�
 msgstr ""
 
 #~ msgid "函数"
+#~ msgstr ""
+
+#~ msgid "函数(普通视图)"
 #~ msgstr ""
 

@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 21:23+0800\n"
+"POT-Creation-Date: 2019-07-17 21:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../source/arduino/03.Control.rst:2
-msgid "控制(普通视图)"
+msgid "控制"
 msgstr ""
 
 #: ../../source/arduino/03.Control.rst:4
@@ -30,16 +30,19 @@ msgid "初始化"
 msgstr ""
 
 #: ../../source/arduino/03.Control.rst:15
-#: ../../source/arduino/03.Control.rst:70
-#: ../../source/arduino/03.Control.rst:106
-#: ../../source/arduino/03.Control.rst:150
-#: ../../source/arduino/03.Control.rst:237
-#: ../../source/arduino/03.Control.rst:291
-#: ../../source/arduino/03.Control.rst:344
-#: ../../source/arduino/03.Control.rst:394
-#: ../../source/arduino/03.Control.rst:435
-#: ../../source/arduino/03.Control.rst:482
-#: ../../source/arduino/03.Control.rst:497
+#: ../../source/arduino/03.Control.rst:69
+#: ../../source/arduino/03.Control.rst:105
+#: ../../source/arduino/03.Control.rst:149
+#: ../../source/arduino/03.Control.rst:236
+#: ../../source/arduino/03.Control.rst:290
+#: ../../source/arduino/03.Control.rst:343
+#: ../../source/arduino/03.Control.rst:393
+#: ../../source/arduino/03.Control.rst:434
+#: ../../source/arduino/03.Control.rst:481
+#: ../../source/arduino/03.Control.rst:496
+#: ../../source/arduino/03.Control.rst:512
+#: ../../source/arduino/03.Control.rst:549
+#: ../../source/arduino/03.Control.rst:586
 msgid "描述"
 msgstr ""
 
@@ -53,15 +56,18 @@ msgstr ""
 
 #: ../../source/arduino/03.Control.rst:25
 #: ../../source/arduino/03.Control.rst:43
-#: ../../source/arduino/03.Control.rst:81
-#: ../../source/arduino/03.Control.rst:116
-#: ../../source/arduino/03.Control.rst:166
-#: ../../source/arduino/03.Control.rst:206
-#: ../../source/arduino/03.Control.rst:259
-#: ../../source/arduino/03.Control.rst:312
-#: ../../source/arduino/03.Control.rst:362
-#: ../../source/arduino/03.Control.rst:410
-#: ../../source/arduino/03.Control.rst:446
+#: ../../source/arduino/03.Control.rst:80
+#: ../../source/arduino/03.Control.rst:115
+#: ../../source/arduino/03.Control.rst:165
+#: ../../source/arduino/03.Control.rst:205
+#: ../../source/arduino/03.Control.rst:258
+#: ../../source/arduino/03.Control.rst:311
+#: ../../source/arduino/03.Control.rst:361
+#: ../../source/arduino/03.Control.rst:409
+#: ../../source/arduino/03.Control.rst:445
+#: ../../source/arduino/03.Control.rst:522
+#: ../../source/arduino/03.Control.rst:559
+#: ../../source/arduino/03.Control.rst:594
 msgid "范例"
 msgstr ""
 
@@ -73,291 +79,342 @@ msgstr ""
 msgid "在初始化时定义中断函数。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:65
+#: ../../source/arduino/03.Control.rst:64
 msgid "while 循环"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:73
+#: ../../source/arduino/03.Control.rst:72
 msgid ""
 "while循环会无限的循环，直到括号内的判断语句变为假。 "
 "必须要有能改变判断语句的东西，要不然while循环将永远不会结束。你可以使用一个传感器的值，或者一个变量来控制什么时候停止该循环。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:77
-#: ../../source/arduino/03.Control.rst:112
-#: ../../source/arduino/03.Control.rst:156
-#: ../../source/arduino/03.Control.rst:247
-#: ../../source/arduino/03.Control.rst:299
-#: ../../source/arduino/03.Control.rst:352
+#: ../../source/arduino/03.Control.rst:76
+#: ../../source/arduino/03.Control.rst:111
+#: ../../source/arduino/03.Control.rst:155
+#: ../../source/arduino/03.Control.rst:246
+#: ../../source/arduino/03.Control.rst:298
+#: ../../source/arduino/03.Control.rst:351
 msgid "参数"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:78
+#: ../../source/arduino/03.Control.rst:77
 msgid "满足条件：为真或为假的一个条件。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:83
+#: ../../source/arduino/03.Control.rst:82
 msgid "当温度高于30度时，亮灯，否则灭灯。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:101
+#: ../../source/arduino/03.Control.rst:100
 msgid "延时"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:109
+#: ../../source/arduino/03.Control.rst:108
 msgid "使程序暂定设定的时间（单位毫秒）。（一秒等于1000毫秒）。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:113
+#: ../../source/arduino/03.Control.rst:112
 msgid "毫秒：暂停的毫秒数。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:118
+#: ../../source/arduino/03.Control.rst:117
 msgid "13号引脚灯亮1秒，灭1秒，往复循环。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:136
-#: ../../source/arduino/03.Control.rst:228
-#: ../../source/arduino/03.Control.rst:282
-#: ../../source/arduino/03.Control.rst:335
-#: ../../source/arduino/03.Control.rst:385
-#: ../../source/arduino/03.Control.rst:471
+#: ../../source/arduino/03.Control.rst:135
+#: ../../source/arduino/03.Control.rst:227
+#: ../../source/arduino/03.Control.rst:281
+#: ../../source/arduino/03.Control.rst:334
+#: ../../source/arduino/03.Control.rst:384
+#: ../../source/arduino/03.Control.rst:470
 msgid "注释"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:138
+#: ../../source/arduino/03.Control.rst:137
 msgid "虽然创建一个使用delay()的闪烁LED很简单，并且许多例子将很短的delay用于消除开关抖动。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:140
+#: ../../source/arduino/03.Control.rst:139
 msgid "但delay()确实拥有很多显著的缺点。在delay函数使用的过程中，读取传感器值、计算、引脚操作均无法执行，因此，它所带来的后果就是使其他大多数活动暂停。大多数熟练的程序员通常避免超过10毫秒的delay(),除非arduino程序非常简单。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:142
+#: ../../source/arduino/03.Control.rst:141
 msgid "利用定时器，就可以解决这个问题，可以避免由于delay()带来的CPU暂停，也能很好地实现每隔一定时间执行动作。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:145
+#: ../../source/arduino/03.Control.rst:144
 msgid "如果(if)"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:153
+#: ../../source/arduino/03.Control.rst:152
 msgid "if 语句与比较运算符一起用于检测某个条件是否达成，如某个传感器的值是否等于某个值。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:157
+#: ../../source/arduino/03.Control.rst:156
 msgid "条件：比较表达式"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:160
-#: ../../source/arduino/03.Control.rst:253
-#: ../../source/arduino/03.Control.rst:306
-#: ../../source/arduino/03.Control.rst:356
-#: ../../source/arduino/03.Control.rst:404
-#: ../../source/arduino/03.Control.rst:441
-#: ../../source/arduino/03.Control.rst:488
-#: ../../source/arduino/03.Control.rst:503
+#: ../../source/arduino/03.Control.rst:159
+#: ../../source/arduino/03.Control.rst:252
+#: ../../source/arduino/03.Control.rst:305
+#: ../../source/arduino/03.Control.rst:355
+#: ../../source/arduino/03.Control.rst:403
+#: ../../source/arduino/03.Control.rst:440
+#: ../../source/arduino/03.Control.rst:487
+#: ../../source/arduino/03.Control.rst:502
+#: ../../source/arduino/03.Control.rst:518
+#: ../../source/arduino/03.Control.rst:555
+#: ../../source/arduino/03.Control.rst:590
 msgid "用法"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:161
+#: ../../source/arduino/03.Control.rst:160
 msgid "增加条件：如果需要增加条件，可以点开齿轮，然后将左侧的“否则如果”或者“否则”模块拖到右侧的“如果”之中。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:168
+#: ../../source/arduino/03.Control.rst:167
 msgid "当连接在2号引脚的按键按下时，点亮13号引脚的灯。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:185
+#: ../../source/arduino/03.Control.rst:184
 msgid "如果判断的条件大于等于1时，可以省略等于判断，因为只要 该表达式的结果不为0，则为真。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:187
+#: ../../source/arduino/03.Control.rst:186
 msgid "所以，上面的写法与下面的写法等效。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:208
+#: ../../source/arduino/03.Control.rst:207
 msgid "当连接在2号引脚的按键按下时，点亮13号引脚的灯;当按键松开时，灯灭。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:229
+#: ../../source/arduino/03.Control.rst:228
 msgid "另外一种进行多种条件分支判断的语句是switch case语句。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:232
+#: ../../source/arduino/03.Control.rst:231
 msgid "如果(switch)"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:240
+#: ../../source/arduino/03.Control.rst:239
 msgid "和if语句相同，switch…case通过设定的在不同条件下执行的代码控制程序的流程。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:242
+#: ../../source/arduino/03.Control.rst:241
 msgid "特别地，switch语句将变量值和case语句中设定的值进行比较。当一个case语句中的设定值与变量值相同时，这条case语句将被执行。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:244
+#: ../../source/arduino/03.Control.rst:243
 msgid "关键字break可用于退出switch语句，通常每条case语句都以break结尾。如果没有break语句，switch语句将会一直执行接下来的语句（一直向下）直到遇见一个break，或者直到switch语句结尾。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:248
+#: ../../source/arduino/03.Control.rst:247
 msgid "var: 用于与下面的case中的标签进行比较的变量值"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:250
+#: ../../source/arduino/03.Control.rst:249
 msgid "label: 与变量进行比较的值"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:254
+#: ../../source/arduino/03.Control.rst:253
 msgid "增加case：如果需要增加条件，可以点开齿轮，然后将左侧的“case”或者“default”模块拖到右侧的“switch”之中。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:261
+#: ../../source/arduino/03.Control.rst:260
 msgid "当连接在2号引脚的按键按下时，点亮13号引脚的灯，否则13号引脚的灯灭"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:283
+#: ../../source/arduino/03.Control.rst:282
 msgid "每个switch可以有多个case，但是最多不超过一个default，当不满足任何一个case时，执行default中的程序。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:286
+#: ../../source/arduino/03.Control.rst:285
 msgid "for循环"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:294
+#: ../../source/arduino/03.Control.rst:293
 msgid "for循环用于重复执行一段的程序。通常使用一个增量计数器计数并终止循环。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:296
+#: ../../source/arduino/03.Control.rst:295
 msgid "for循环用于重复性的操作非常有效，通常与数组结合起来使用来操作数据、引脚。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:300
+#: ../../source/arduino/03.Control.rst:299
 msgid "变量名：用于记录for循环次数的变量名。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:301
+#: ../../source/arduino/03.Control.rst:300
 msgid "起始值：循环的计数起始值，一般从0开头，也可以从其他数值开始。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:302
+#: ../../source/arduino/03.Control.rst:301
 msgid "终点值：循环的计数终点值。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:303
+#: ../../source/arduino/03.Control.rst:302
 msgid "步长：每次循环的步长，一般为1，也可以是其他整数。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:307
+#: ../../source/arduino/03.Control.rst:306
 msgid "可自行设置循环的变量名称，并确定循环的开始和终止以及循环方向，最后一个数字可以为负数。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:314
+#: ../../source/arduino/03.Control.rst:313
 msgid "将连接在3号引脚的灯制作成呼吸灯，每一次亮度变化之间间隔50毫秒"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:336
+#: ../../source/arduino/03.Control.rst:335
 msgid "for循环中定义的变量有名字，可以用字母i,j,k或单词red,state等有意义的词语表示。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:339
+#: ../../source/arduino/03.Control.rst:338
 msgid "跳出循环"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:347
+#: ../../source/arduino/03.Control.rst:346
 msgid "跳出循环用于终止一段重复的程序，一般使用时作为条件语句的执行部分，当循环中的变量满足某个条件时，执行跳出循环语句。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:349
+#: ../../source/arduino/03.Control.rst:348
 msgid "跳出循环在处理循环中的特殊情况时十分有用。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:353
+#: ../../source/arduino/03.Control.rst:352
 msgid "操作：可以选择跳出循环和跳到下一个循环两种操作，结果不同。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:357
+#: ../../source/arduino/03.Control.rst:356
 msgid "可直接加到循环语句当中，一般自行添加条件语句进行判断，判断为真时执行跳出循环语句。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:364
+#: ../../source/arduino/03.Control.rst:363
 msgid "引脚3上的数字从0到255逐一增加，每一次增加之间间隔50毫秒，当数字增加到150时停止增加"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:386
+#: ../../source/arduino/03.Control.rst:385
 msgid "注意跳到下一个循环的使用，可以方便的将循环中不需要的步骤跳过。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:389
+#: ../../source/arduino/03.Control.rst:388
 msgid "系统运行时间"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:397
+#: ../../source/arduino/03.Control.rst:396
 msgid "返回自硬件启动或重启以来的时间值。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:400
+#: ../../source/arduino/03.Control.rst:399
 msgid "返回"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:401
+#: ../../source/arduino/03.Control.rst:400
 msgid "自硬件启动或重启以来的时间，毫秒数或者微秒数。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:405
+#: ../../source/arduino/03.Control.rst:404
 msgid "返回系统运行时间，赋给某一变量，进行进一步的功能设计。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:412
+#: ../../source/arduino/03.Control.rst:411
 msgid "自动换行打印系统运行时间"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:430
+#: ../../source/arduino/03.Control.rst:429
 msgid "MsTimer2 定时器"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:438
+#: ../../source/arduino/03.Control.rst:437
 msgid "每隔设置的毫秒数执行相应的程序"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:442
+#: ../../source/arduino/03.Control.rst:441
 msgid "设置计时器的时间：计时器的时间可以进行修改。 主要用于设计定时改变状态的程序，可以通过计时器时间间隔设置进行状态会更改程序的运行。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:447
+#: ../../source/arduino/03.Control.rst:446
 msgid "利用定时器控制13号引脚LED每隔1秒亮灭一次。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:472
+#: ../../source/arduino/03.Control.rst:471
 msgid "利用定时器可以提高硬件的工作效率。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:474
+#: ../../source/arduino/03.Control.rst:473
 msgid "但在一个程序中只能使用一个MsTimer2定时器，如果要实现多个时间的定时，可以配合变量计数来完成。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:477
+#: ../../source/arduino/03.Control.rst:476
 msgid "MsTimer2 定时器启动"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:485
+#: ../../source/arduino/03.Control.rst:484
 msgid "MsTimer2定时器开始计时"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:489
+#: ../../source/arduino/03.Control.rst:488
 msgid "需要使用MsTimer2计时器时，需要先插入MsTimer2定时器启动模块，开始计时，需要与MsTimer2定时器配合使用。"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:492
+#: ../../source/arduino/03.Control.rst:491
 msgid "MsTimer2 定时器停止"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:500
+#: ../../source/arduino/03.Control.rst:499
 msgid "MsTimer2定时器停止计时"
 msgstr ""
 
-#: ../../source/arduino/03.Control.rst:504
+#: ../../source/arduino/03.Control.rst:503
 msgid "需要使用MsTimer2计时器时，需要先插入MsTimer2定时器启动模块，开始计时，需要与MsTimer2定时器配合使用，插入停止模块后计时器停止计时。"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:507
+msgid "允许中断"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:515
+msgid "允许输入/输出模块中管脚中断的运行"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:519
+msgid "主要用于加入禁止中断模块后恢复中断执行。"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:523
+msgid "使用按钮模拟开关，每次按下，LED灯切换亮灭"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:544
+msgid "禁止中断"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:552
+msgid "禁止输入/输出模块中管脚中断的运行"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:556
+msgid "主要用于禁止中断模块的中断执行。"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:560
+msgid "在允许中断范例的基础上，尝试禁止中断"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:581
+msgid "SCoop Task"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:587
+msgid "SCoop模块用于执行多线程任务，最多支持8个任务。"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:591
+msgid "在sCoop task中编写每个线程需要执行的任务。"
+msgstr ""
+
+#: ../../source/arduino/03.Control.rst:595
+msgid "利用SCoop，控制13号引脚LED灯以2秒的频率闪烁，同时控制12号引脚的LED灯以200毫秒的频率闪烁。"
 msgstr ""
 
 #~ msgid "控制"
@@ -411,5 +468,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "按下按键显示当前系统运行时间"
+#~ msgstr ""
+
+#~ msgid "控制(普通视图)"
 #~ msgstr ""
 
