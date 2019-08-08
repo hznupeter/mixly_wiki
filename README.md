@@ -68,18 +68,24 @@ https://www.arduino.cc/reference/en/
 ### 安装sphinx-intl.
 
 ```pip install sphinx-intl```
-
-### 修改配置文件
-在 conf.py中添加以下内容：
-```
-locale_dirs = ['locale/']   # path is example but recommended.
-gettext_compact = False     # optional.
-```
 ### 生成pot文件
 运行以下命令生成pot文件
+windows系统下,注意后面的命令都是在doc模式下进行的。
 ```
-make gettext
+cd doc
+make.bat gettext
 ```
+或者直接
+```
+.\doc\make.bat gettext
+```
+如果提示
+```
+Extension error:
+Could not import recommonmark.parser (needed for source parser) (exception: No module named 'recommonmark')
+```
+那么请运行
+```pip install recommonmark```就可以了。
 运行完成后会生成新目录 ：```doc/build/gettext```
 
 ### 生成英文翻译文件

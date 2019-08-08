@@ -8,17 +8,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mixly Wiki 0.999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-17 21:19+0800\n"
+"POT-Creation-Date: 2019-08-08 20:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../source/arduino/15.Factory.rst:2
 msgid "Factory"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:3
+msgid "Factory中的模块可以方便用户编写Mixly中不支持的传感器功能。 .. image:: images/15/factory.png"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:6
+msgid "将以RTC1307库为例，介绍利用factory中的模块，在Mixly快速使用Arduino标准库。"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:9
+msgid "准备工作"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:10
+msgid ""
+"1.从github.com等网站下载ds1307RTC Arduino库。 "
+"2.将库文件解压到Mixly/\\arduino-1.x.x/\\portable/\\sketchbook/\\libraries目录中。 "
+"3.打开Mixly自带的arduino IDE（路径\\Mixly\\arduino-1.x.x\\arduino.exe），在软件中打开 "
+"库目录下的example范例，编译并上传，测试能否正常使用。如果不能正常使用，则需要更换库或者检查硬件问题。"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:15
+msgid "重写程序"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:17
+msgid "打开范例程序Mixly/\\arduino-1.x.x/\\portable/\\sketchbook/\\libraries/\\DS1307RTC/\\examples/\\ReadTime/\\ReadTest/\\ReadTest.ino，先分析程序，并适当简化程序。"
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:19
+msgid "源程序如下："
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:74
+msgid "简化程序如下："
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:104
+msgid "Factory模式下模块："
+msgstr ""
+
+#: ../../source/arduino/15.Factory.rst:108
+msgid "编写完成后，编译并上传，进行测试。测试利用factroy编写的程序效果是否与arduino IDE编写相同。"
 msgstr ""
 
 #~ msgid "Factory"
