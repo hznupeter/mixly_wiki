@@ -26,12 +26,13 @@ http://www.sublimetext.com/
 |--doc
    |--build  /*生成目录*/
       |--doctrees
-      |--gettext
-      |--html
+      |--gettext /*语言包字段目录*/
+      |--html /*本地预览目录*/
    |--source /*源文件目录*/
       |--_static /*静态html文件目录*/
       |--_templates /*自定义模板目录*/
-      |--arduino /*arduino部分wiki目录*/
+      |--arduino /*Arduino部分wiki目录*/
+         |--02.Input-Output.rst /*输入\输出的wiki文件*/
          |--images /*arduino引用图片*/
             |--02  /*02.XXX.rst 文件引用的图片目录*/
                |-- analogRead.png /*所有图片都用png格式，文件命名格式为该函数名*/
@@ -40,6 +41,7 @@ http://www.sublimetext.com/
                |-- analogRead-example.en.png /*analogRead-example.png对应的英文图片*/
       |--basic /*软件基础部分wiki目录*/
       |--locale /*多语言目录*/
+        |--en   /*英文语言翻译文件*/
       |--MicroPython /*micropython部分wiki目录*/
       |--Python /*python部分wiki目录*/
 

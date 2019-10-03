@@ -10,26 +10,27 @@ Mixly 帮助文档
 
    basic/index.rst
 
-Arduino 编程
+Arduino AVR 编程
 -------------------
 .. toctree::
    :maxdepth: 3
 
-   arduino/index.rst
+   Arduino/AVR/index.rst
 
-Blynk 物联网
------------------------
-.. toctree::
-   :maxdepth: 2
-
-   ESP8266/index.rst
-
-Python 编程
+Arduino ESP8266 编程
 -------------------
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-   Python/index.rst
+   Arduino/ESP8266/index.rst
+
+Arduino ESP32 编程
+-------------------
+.. toctree::
+   :maxdepth: 3
+
+   Arduino/ESP32/index.rst
+
 
 MicroPython 编程
 -----------------------
@@ -37,3 +38,10 @@ MicroPython 编程
    :maxdepth: 2
 
    MicroPython/index.rst
+
+Python 编程
+-------------------
+.. toctree::
+   :maxdepth: 2
+
+   Python/index.rst
