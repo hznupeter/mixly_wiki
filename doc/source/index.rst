@@ -45,3 +45,10 @@ Python 编程
    :maxdepth: 2
 
    Python/index.rst
+
+CircuitPython 编程
+-----------------------
+.. toctree::
+   :maxdepth: 2
+
+   CircuitPython/index.rst
